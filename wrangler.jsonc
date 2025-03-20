@@ -24,12 +24,6 @@
     "ai": {
         "binding": "AI"
     },
-    "r2_buckets": [
-        {
-            "binding": "BATCHES_BUCKET",
-            "bucket_name": "batches"
-        }
-    ],
     "queues": {
         "producers": [
             {
@@ -44,9 +38,9 @@
                 "max_batch_size": 100,
                 "max_batch_timeout": 60,
                 "max_retries": 5,
-                "retry_delay": 10,
-                "max_concurrency": 1,
-                "dead_letter_queue": "processed-queue"
+                "retry_delay": 10
+                // "max_concurrency": 1,
+                // "dead_letter_queue": "processed-queue"
             }
         ]
     },
@@ -55,6 +49,13 @@
             "name": "wat-workflow",
             "binding": "WAT_WORKFLOW",
             "class_name": "WatWorkflow"
+        }
+    ],
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "batches",
+            "database_id": "a2a4cd5e-e39c-431d-8b47-303413da29b2"
         }
     ]
     /**
