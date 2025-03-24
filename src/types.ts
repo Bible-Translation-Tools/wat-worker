@@ -39,7 +39,7 @@ export type WordResponse = {
 
 export type ModelResponse = {
   model: string;
-  result: string;
+  result: string | null;
 };
 
 export enum BatchStatus {
